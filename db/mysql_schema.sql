@@ -14,7 +14,7 @@ CREATE TABLE
 
 -- Agregar 2 registros.
 INSERT INTO personas (nombre, edad) VALUES ('Ignacio', 44);
-INSERT INTO personas (nombre, edad)VALUES ('Rodrigo', 30);
+INSERT INTO personas (nombre, edad) VALUES ('Rodrigo', 30);
 
 -- Leer datos de tabla "personas".
 SELECT * FROM personas;
