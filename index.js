@@ -2,6 +2,7 @@ import express from "express";
 import testRoutes from "./routes/test.routes.js";
 import dbTestRouter from './routes/dbtest.routes.js';
 import personasRouter from './routes/personas.routes.js';
+import saludoRouter from './routes/saludo.routes.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,6 +18,9 @@ app.use('/dbtest', dbTestRouter);
 
 // Probar CRUD MySQL con tabla "personas".
 app.use('/personas', personasRouter);
+
+// Ruta para práctica del día 07.
+app.use('/saludo', saludoRouter);
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
