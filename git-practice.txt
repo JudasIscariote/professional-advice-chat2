@@ -1,0 +1,1 @@
+Este archivo es para practicar Git el día 6.
