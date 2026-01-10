@@ -3,6 +3,7 @@ import testRoutes from "./routes/test.routes.js";
 import dbTestRouter from './routes/dbtest.routes.js';
 import personasRouter from './routes/personas.routes.js';
 import saludoRouter from './routes/saludo.routes.js';
+import authRoutes from './modules/auth/auth.routes.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,6 +22,9 @@ app.use('/personas', personasRouter);
 
 // Ruta para práctica del día 07.
 app.use('/saludo', saludoRouter);
+
+// Módulo para rutas de autorización.
+app.use('/auth', authRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
